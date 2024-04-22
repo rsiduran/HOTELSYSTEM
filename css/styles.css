@@ -1,0 +1,745 @@
+body {
+    margin: 0;
+    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #858796;
+    background-color: #fff
+}
+
+.header {
+    padding-block: 5rem;
+    background-image: linear-gradient(
+        rgba(15, 26, 44, 0.5),
+        rgba(15, 26, 44, 0.5)
+      ),
+      url("/assets/image/sample.png");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}   
+
+.header__container .section__subheader {
+  color: var(--white);
+}
+
+.header__container h1 {
+  margin-bottom: 2rem;
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 7rem;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.section__container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+  }
+  
+  .section__subheader {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+  }
+
+  .btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--secondary-color);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+.book-now {
+    background-color: #F3F705; /* Blue background */
+    color: #000000; /* White text */
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 20px;
+}
+
+.book-now-content {
+    max-width: 2000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    align-items: center;
+}
+
+.book-now-image {
+    flex: 1;
+    margin: 20px; /* Add spacing between the image and text */
+}
+
+
+.book-now-text {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.book-now-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.book-now-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.book-now-text button {
+    background-color: #ff0808; /* White background */
+    color: #ffffff; /* Blue text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.book-now-text button:hover {
+    background-color: #ffffff; /* Darker blue on hover */
+    color: #ff0000; /* White text on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .book-now-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+
+    .book-now-image,
+    .book-now-text {
+        flex-basis: 100%; /* Make items take full width on smaller screens */
+    }
+
+    .book-now-image {
+        margin-bottom: 20px; /* Add spacing between image and text on smaller screens */
+    }
+    
+    .book-now {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .book-now-image {
+        flex-basis: 100%; /* Make image take full width on smaller screens */
+        margin-bottom: 20px; /* Add spacing between image and text on smaller screens */
+    }
+
+    .book-now-image img {
+        max-width: 100%; /* Adjusted width for responsiveness */
+    }
+
+}
+
+
+
+
+.overall-booking {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.booking-container,
+.total-rooms {
+    text-align: center;
+    margin: 0 auto; /* I-center ang mga container */
+}
+
+.booking-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.booking-number,
+.rooms-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    color: #007bff; /* Blue text */
+}
+
+.booking-description,
+.rooms-description {
+    color: #555; /* Gray text */
+    margin: 0;
+}
+
+.book-now-button button {
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.book-now-button button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Media query for responsiveness */
+@media screen and (min-width: 768px) {
+    .overall-booking {
+        flex-direction: row; /* Display items in a row on larger screens */
+    }
+
+    .booking-container,
+    .total-rooms {
+        flex: 1;
+    }
+
+    .booking-container {
+        text-align: center; /* Center the content horizontally */
+    }
+
+    .book-now-image img {
+        width: 900px;
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .book-now-text {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 1000px) {
+
+    .book-now-image img {
+        width: 700px;
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .book-now-text {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 780px) {
+
+    .book-now-image img {
+        width: 650px;
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+    }
+    
+    .book-now-text {
+        flex: 1;
+        padding: 0 20px;
+    }
+
+}
+
+/* ITO YUNG MAY SLIDESHOW  */
+
+#image-slider {
+    width: 80%; /* Adjusted width for responsiveness */
+    max-width: 800px; /* Maximum width */
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    background-color: #f8f1ea; /* Add a luxurious background color */
+    margin-top: 50px;
+}
+
+.slider-content {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Add a luxurious font */
+    color: #000000; /* Change text color to white for contrast */
+}
+
+
+.slider-content h1 {
+    font-size: 36px; /* Increase font size for a luxurious feel */
+    margin-top: 40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.slider-content p {
+    font-size: 18px; /* Increase font size for a luxurious feel */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1.5s ease; /* Change the transition duration */
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+.slide img {
+    max-width: 90%; /* Adjusted width for responsiveness */
+    max-height: 300px; /* Adjusted height for responsiveness */
+    border-radius: 10px; /* Add border radius for a luxurious look */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add box shadow for depth */
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.nav-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Add border radius for a luxurious look */
+    font-size: 20px; /* Increase font size for a luxurious feel */
+    margin-top: 190px;
+}
+
+.prev {
+    margin-left: 20px;
+  }
+  
+  .next {
+    margin-right: 20px;
+  }
+
+  /* Responsive adjustments */
+  @media screen and (max-width: 768px) {
+    #image-slider {
+        width: 95%; /* Adjusted width for smaller screens */
+        height: 400px;
+    }
+
+    .nav-button {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+        padding: 10px;
+        margin-top: 70px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    #image-slider {
+        width: 50%; /* Adjusted width for even smaller screens */
+    }
+
+    .nav-button {
+        font-size: 16px; /* Adjusted font size for even smaller screens */
+    }
+
+    #image-slider {
+        width: 95%; /* Adjusted width for smaller screens */
+        height: 400px;
+    }
+
+    .nav-button {
+        font-size: 18px; /* Adjusted font size for smaller screens */
+        padding: 10px;
+        margin-top: 70px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+
+}
+
+
+/* BOOKING NA TO  */
+
+.rooms-button {
+    text-align: center;
+    margin-top: 50px;
+    background-color: #f2f2f2; /* Aesthetic background color */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.choice-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.book-now-button:hover {
+    background-color: #219d54;
+}
+
+.choice-button:hover {
+    background-color: #2980b9;
+}
+
+.rooms-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    background-color: #f2f2f2; /* Aesthetic background color */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.room-details {
+    width: calc(33.33% - 40px); /* Adjusted width for responsiveness */
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.room-details:hover {
+    transform: translateY(-5px);
+}
+
+.room-details img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.details-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details-content p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.details-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.details-content ul li {
+    margin-bottom: 10px;
+}
+
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+        .room-details {
+            width: 400px;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .room-details {
+            width: 400px;
+        }
+    }
+  
+
+
+/* The Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fff;
+    margin: 10% auto; /* Center modal vertically */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    max-width: 500px; /* Limit width for better readability */
+    position: relative; /* Relative position for close button */
+  }
+  
+  /* Close Button */
+  .close {
+    color: #aaa;
+    font-size: 28px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  /* Form Styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"] {
+    width: calc(50% - 10px); /* 50% width for responsiveness */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Datepicker Styling */
+  #datepicker {
+    width: calc(50% - 10px); /* 50% width for responsiveness */
+    cursor: pointer;
+    background-image: url('calendar-icon.png'); /* Add calendar icon */
+    background-size: 25px;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+  }
+
+  .logo-images {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* This ensures the aspect ratio is maintained */
+  }
+
+
+  /* testimonials */
+
+  .testimonials-container {
+    margin-bottom: 50px;
+  }
+  
+  .testimonial {
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial p {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .testimonial cite {
+    font-style: italic;
+  }
+
+
+  /* arrow pataas */
+
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+}
+
+
+/* helps */
+
+.About {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+  }
+  
+  .about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%; /* Full width by default */
+  }
+  
+  .about-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .about-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .about-item p {
+    font-size: 16px;
+    color: #555;
+  }
+  
+  /* Hide content by default */
+  .about-item .content {
+    display: none;
+  }
+  
+  /* Show content when toggled */
+  .about-item.active .content {
+    display: block;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+    width: 100%; /* Full width */
+    text-align: right; /* Align arrow to the right */
+}
+
+.toggle-button:focus {
+    outline: none; /* Remove outline when button is focused */
+}
+
+.toggle-button.active {
+    border: none; /* Remove border when button is active */
+}
+  
+  .help-item .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .help-item {
+    flex: 1 0 200px; /* Each item takes up equal space, with a fixed width of 200px */
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Animation transition */
+    margin-bottom: 10px;
+  }
+  
+  .help-item:hover {
+    transform: translateY(-5px); /* Animation on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+
+  .footer-company-name {
+    margin: 0; /* Remove default margin */
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+}

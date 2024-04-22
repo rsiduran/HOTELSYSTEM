@@ -1,0 +1,689 @@
+/* styles.css */
+
+
+
+/* Reset styles */
+body, h1, h2, h3, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+
+
+
+.home-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.company-info {
+  margin-bottom: 50px;
+}
+
+.company-info h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.company-info p {
+  font-size: 18px;
+  color: #666;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap; /* I-wrap ang mga features kapag hindi na kasya sa isang linya */
+  justify-content: center; /* I-align ang mga features sa gitna */
+  gap: 20px; /* Magdagdag ng space sa pagitan ng mga features */
+  margin-bottom: 50px;
+}
+
+.feature {
+  flex: 1;
+  max-width: 300px; /* Limitahan ang maximum width ng bawat feature */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+}
+
+.feature img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #666;
+}
+
+.testimonials-container {
+  margin-bottom: 50px;
+}
+
+.testimonial {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.testimonial img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  color: #666;
+}
+
+.testimonial cite {
+  font-style: italic;
+}
+
+.cta-container {
+  margin-bottom: 50px;
+}
+
+.cta-container h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cta-container button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-container button:hover {
+  background-color: #555;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  justify-content: center; /* Center the images horizontally */
+}
+
+.image-gallery .image {
+  margin: 10px; /* Add margin around each image */
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-gallery .image:hover .image-text {
+  transform: translateY(-50%) translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+.image-gallery img {
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+
+
+
+
+/* orderfood */
+
+.orderfood {
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+
+.orderfood h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  color: #333;
+}
+
+.orderfood .category-dropdown {
+  text-align: right; /* Align the dropdown to the right */
+  margin-bottom: 20px;
+  margin-right: 50px;
+}
+
+.orderfood .category-dropdown label {
+  margin-right: 10px; /* Add some spacing between label and select */
+}
+
+.orderfood .category-dropdown select {
+  padding: 8px 12px; /* Adjust padding for better appearance */
+  border-radius: 4px; /* Add border-radius */
+  border: 1px solid #ccc; /* Add border */
+}
+
+.orderfood .category-dropdown input[type="submit"] {
+  padding: 8px 16px; /* Adjust padding for better appearance */
+  border-radius: 4px; /* Add border-radius */
+  border: none; /* Remove default border */
+  background-color: #555; /* Button background color */
+  color: #fff; /* Button text color */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add transition effect */
+  
+}
+
+.orderfood .category-dropdown input[type="submit"]:hover {
+  background-color: #333; /* Change background color on hover */
+}
+
+.orderfood table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+  border-radius: 8px; /* Added border-radius */
+}
+
+.orderfood th,
+.orderfood td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.orderfood th {
+  background-color: #ffffff; /* Lighter background for table header */
+}
+
+
+.orderfood td.description {
+  word-wrap: break-word; /* This will break long words to fit within the cell */
+}
+
+.orderfood input[type="number"] {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.orderfood button.order-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s; /* Added transform transition */
+}
+
+
+.orderfood .food-item button.add-to-order {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.orderfood button.order-button:hover {
+  background-color: #333;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+.orderfood .food-item {
+  transition: background-color 0.3s ease;
+}
+
+.orderfood .food-item img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Added border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.orderfood .food-item:hover {
+  background-color: #f9f9f9;
+}
+
+.orderfood .food-item button.add-to-order:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+.orderfood .food-item .quantity-cell {
+  position: relative;
+}
+
+.orderfood .food-item .quantity-input {
+  width: 50px;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+
+}
+
+.orderfood .food-item .quantity-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .cta-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .category {
+    flex: 1 0 200px;
+  }
+
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .orderfood {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    white-space: nowrap;
+  }
+
+  th:first-child,
+  td:first-child {
+    min-width: 100px; /* Set a minimum width for the first column to accommodate images */
+  }
+
+  .orderfood .food-item img {
+    width: auto; /* Make images responsive */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Ensure the image is treated as a block element */
+    margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .image-gallery {
+    flex-direction: column; /* Change to column layout for narrow screens */
+    align-items: center; /* Center items vertically */
+  }
+
+  .image-gallery .image {
+    width: 100%; /* Make images occupy full width */
+  }
+
+
+  .modal-content {
+    width: 90%; /* Adjust width for smaller screens */
+    margin-bottom: 100%;
+  }
+  
+  table {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .help-item {
+    flex-basis: calc(50% - 20px); /* Two items per row */
+  }
+
+@media (max-width: 480px) {
+  .help-item {
+    flex-basis: calc(100% - 20px); /* One item per row */
+  }
+
+}
+}
+
+/* Scroll-to-top button styling */
+#scrollToTopButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+#scrollToTopButton:hover {
+  background-color: #555;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+  animation: fadeIn 0.5s; /* Fade in animation */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: none;
+  width: 80%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  animation: slideIn 0.5s; /* Slide in animation */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+  border-radius: 8px; /* Added border-radius */
+}
+
+.modal-content th,
+.modal-content td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.modal-content th {
+  background-color: #ffffff; /* Lighter background for table header */
+}
+
+
+.modal-content td.description {
+  word-wrap: break-word; /* This will break long words to fit within the cell */
+}
+
+.modal-content input[type="number"] {
+  width: 50px;
+}
+
+.modal-content button.add-to-guest{
+  background-color: #ff0707;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.modal-content button.add-to-guest:hover {
+  background-color: #a80303;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+.modal-content button.add-to-guest.button-clicked {
+  animation: pulse 0.3s;
+}
+
+.modal-content button.finalavail{
+  margin-top: 30px;
+  margin-bottom: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.modal-content button.finalavail:hover {
+  background-color: #0b860f;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+.modal-content button.finalavail.button-clicked {
+  animation: pulse 0.3s;
+}
+
+.modal-content .quantity-cell {
+  position: relative;
+}
+
+.modal-content .quantity-input {
+  width: 50px; /* Adjust the width as needed */
+  padding: 8px 10px; /* Adjust the padding as needed */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-top: 20px;
+  margin-bottom: -20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.modal-content .quantity-input:focus {
+  outline: none;
+  border-color: #4CAF50; /* Change border color when focused */
+}
+
+.About {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%; /* Full width by default */
+}
+
+.about-item:hover {
+  transform: translateY(-5px);
+}
+
+.about-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+/* Hide content by default */
+.about-item .content {
+  display: none;
+}
+
+/* Show content when toggled */
+.about-item.active .content {
+  display: block;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  outline: none;
+  width: 100%; /* Full width */
+  text-align: right; /* Align arrow to the right */
+}
+
+.help-item .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.help-item {
+  flex: 1 0 200px; /* Each item takes up equal space, with a fixed width of 200px */
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Animation transition */
+  margin-bottom: 10px;
+}
+
+.help-item:hover {
+  transform: translateY(-5px); /* Animation on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}

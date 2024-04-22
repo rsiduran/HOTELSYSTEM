@@ -1,0 +1,250 @@
+<?php
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link rel="stylesheet" href="css/footers.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles1.css">
+
+</head>
+<body style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    <header>
+        <div class="container">
+            <h1>Nice Hotel</h1>
+          </div>
+          <nav>
+            <a href="homepage.html">Home</a>
+            <a href="orderfoods.html">Order Foods</a>
+            <a href="guestavails.html">Guest Service</a>
+            <a href="abouts.html">About</a>
+          </nav>
+        </div>
+      </header>
+
+  <section class="About"id="Abouts">
+    <h1 style="text-align: center; margin-bottom: 40px;">Helps</h1>
+    <div class="container">
+      <div class="about-content">
+        <div class="about-item">
+          <h3>Frequently Asked Questions (FAQs)</h3>
+          <div class="content">
+          <p>Find answers to commonly asked questions here.</p>
+        </div>
+        <button class="toggle-button">&darr;</button>
+        </div>
+
+        <div class="about-item">
+            <h3>Contact Information</h3>
+            <div class="content">
+            <p>Get in touch with us through the provided contact details.</p>
+          </div>
+          <button class="toggle-button">&darr;</button>
+          </div>
+
+          <div class="about-item">
+            <h3>Support Options</h3>
+            <div class="content">
+            <p>We offer various support options including email, phone, and live chat</p>
+          </div>
+          <button class="toggle-button">&darr;</button>
+          </div>
+
+          <div class="about-item">
+            <h3>Privacy Policy</h3>
+            <div class="content">
+            <p>Read our privacy policy to understand how we handle your data.</p>
+          </div>
+          <button class="toggle-button">&darr;</button>
+          </div>
+
+          <div class="about-item">
+            <h3>Terms of Service</h3>
+            <div class="content">
+            <p>Review our terms of service for using our platform.</p>
+          </div>
+          <button class="toggle-button">&darr;</button>
+          </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <button id="scrollToTopButton">&#8593;</button>
+
+
+  <footer class="footer1">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: ReymielVsEstrada@gmail.com</p>
+          <p>Phone: +ImissYouBalikKana</p>
+          <p>Address: 123 Biringan City, Philippines</p>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/Reymiel14" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/louiegang09" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.facebook.com/marklexter.estrada.4" class="social-icon"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+
+</html>
+
+
+<script>
+  // Get the modal
+  var modalorder = document.getElementById("ModalOrder");
+  
+  // Get the button that opens the modal
+  var btnorder = document.getElementById("orderButton");
+  
+  // Get the <span> element that closes the order modal
+  var spanorder = document.getElementsByClassName("close-order")[0];
+  
+  // When the user clicks the button, open the order modal 
+  btnorder.onclick = function() {
+    modalorder.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the order modal
+  spanorder.onclick = function() {
+    modalorder.style.display = "none";
+  }
+  
+  // Get the modal
+  var modalguest = document.getElementById("ModalGuest");
+  
+  // Get the button that opens the modal
+  var btnguest = document.getElementById("guestButton");
+  
+  // Get the <span> element that closes the guest modal
+  var spanguest = document.getElementsByClassName("close-guest")[0];
+  
+  // When the user clicks the button, open the guest modal 
+  btnguest.onclick = function() {
+    modalguest.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the guest modal
+  spanguest.onclick = function() {
+    modalguest.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close the modal
+  window.onclick = function(event) {
+    if (event.target == modalorder) {
+      modalorder.style.display = "none";
+    }
+    if (event.target == modalguest) {
+      modalguest.style.display = "none";
+    }
+  }
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const orderButton = document.getElementById("orderButton");
+
+  orderButton.addEventListener("click", function() {
+    orderButton.classList.add("button-clicked");
+    setTimeout(() => {
+      orderButton.classList.remove("button-clicked");
+    }, 300);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const orderButton = document.getElementById("addorder");
+
+  orderButton.addEventListener("click", function() {
+    orderButton.classList.add("button-clicked");
+    setTimeout(() => {
+      orderButton.classList.remove("button-clicked");
+    }, 300);
+  });
+});
+
+const quantityInputs = document.querySelectorAll('.quantity-input');
+
+quantityInputs.forEach(input => {
+  input.addEventListener('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, ''); // I-dispose ang lahat ng mga hindi numerong character
+  });
+})
+
+
+// window.addEventListener('scroll', function() {
+//   const header = document.querySelector('header');
+//   if (window.scrollY > 100) {
+//     header.classList.add('sticky');
+//   } else {
+//     header.classList.remove('sticky');
+//   }
+// });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.image-gallery .image');
+
+  images.forEach(function(image) {
+    image.addEventListener('mouseover', function() {
+      image.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.3)';
+    });
+
+    image.addEventListener('mouseout', function() {
+      image.style.boxShadow = 'none';
+    });
+  });
+});
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+      scrollToTopButton.addEventListener("click", function() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+
+
+    const toggleButtons = document.querySelectorAll('.toggle-button');
+
+toggleButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const parent = button.parentElement;
+    parent.classList.toggle('active');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const helpItems = document.querySelectorAll(".help-item");
+  
+  helpItems.forEach(function(item) {
+    item.style.opacity = "0";
+    item.style.transition = "opacity 1s ease-in";
+  });
+  
+  setTimeout(function() {
+    helpItems.forEach(function(item) {
+      item.style.opacity = "1";
+    });
+  }, 500);
+});
+
+</script>

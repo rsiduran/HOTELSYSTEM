@@ -1,0 +1,198 @@
+/* orderfood */
+
+.orderfood {
+  text-align: center;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  border: 2px solid #ccc; /* Add border */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.orderfood h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.orderfood table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+  border-radius: 8px; /* Added border-radius */
+}
+
+.orderfood th,
+.orderfood td {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.orderfood th {
+  background-color: #ffffff; /* Lighter background for table header */
+}
+
+.orderfood td.description {
+  word-wrap: break-word; /* This will break long words to fit within the cell */
+}
+
+.orderfood input[type="number"] {
+  width: 50px;
+}
+
+.orderfood button.order-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s; /* Added transform transition */
+}
+
+
+.orderfood .food-item button.add-to-order {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.orderfood button.order-button:hover {
+  background-color: #333;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+.orderfood .food-item {
+  transition: background-color 0.3s ease;
+}
+
+.orderfood .food-item img {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px; /* Added border-radius */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box-shadow */
+}
+
+.orderfood .food-item:hover {
+  background-color: #f9f9f9;
+}
+
+.orderfood button.order-button.button-clicked {
+  animation: pulse 0.3s;
+}
+
+.orderfood .food-item button.add-to-order:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Added hover effect */
+}
+
+/* Animation for the "Add to Order" button */
+.orderfood .food-item button.add-to-order.button-clicked {
+  animation: pulse 0.3s;
+}
+
+.orderfood .food-item .quantity-cell {
+  position: relative;
+}
+
+.orderfood .food-item .quantity-input {
+  width: 50px;
+  padding: 8px 10px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+}
+
+.orderfood .food-item .quantity-input:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+footer
+
+.about-us {
+  padding: 50px 0;
+}
+
+.about-us h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.testimonials {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.testimonial {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial cite {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+
+footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 50px; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.social-links a {
+  margin-left: 10px;
+}
